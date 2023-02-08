@@ -4,7 +4,7 @@
 TX_THREAD application_thread;
 void application_thread_create(void);
 static void application_thread_func(ULONG thread_input);
-static uint8_t application_thread_stack[0x1400] BSP_PLACE_IN_SECTION(".stack.application_thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
+static uint8_t application_thread_stack[0x2400] BSP_PLACE_IN_SECTION(".stack.application_thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
 void tx_startup_err_callback(void *p_instance, void *p_data);
 void tx_startup_common_init(void);
 extern bool g_fsp_common_initialized;
@@ -20,7 +20,7 @@ void application_thread_create(void)
 
     UINT err;
     err = tx_thread_create (&application_thread, (CHAR*) "Application Thread", application_thread_func, (ULONG) NULL,
-                            &application_thread_stack, 0x1400, 1, 1, 25, TX_DONT_START);
+                            &application_thread_stack, 0x2400, 1, 1, 25, TX_DONT_START);
     if (TX_SUCCESS != err)
     {
         tx_startup_err_callback (&application_thread, 0);

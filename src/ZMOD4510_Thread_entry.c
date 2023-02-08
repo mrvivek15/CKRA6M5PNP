@@ -1,5 +1,6 @@
 #include "ZMOD4510_Thread.h"
 #include "RA_ZMOD4XXX_Common.h"
+#include "user_choice.h"
 
 /* ZMOD4510_Thread entry function */
 void ZMOD4510_Thread_entry(void)

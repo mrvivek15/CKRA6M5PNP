@@ -1,5 +1,6 @@
 #include "ICP_Thread.h"
 #include "ICP_10101.h"
+#include "user_choice.h"
 /* ICP_Thread entry function */
 void ICP_Thread_entry(void)
 {

@@ -1,5 +1,6 @@
 #include "OB_1203_Thread.h"
 #include "oximeter.h"
+#include "user_choice.h"
 
 extern void (*p_IntB_Event)(void);
 

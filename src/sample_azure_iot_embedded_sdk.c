@@ -26,6 +26,11 @@
 #include "sample_config.h"
 #include "usr_app.h"
 
+#define SAMPLE_COMMAND_RECEIVE_EVENT                                    ((ULONG)0x00000010)
+#define SAMPLE_PROPERTIES_RECEIVE_EVENT                                 ((ULONG)0x00000020)
+#define SAMPLE_WRITABLE_PROPERTIES_RECEIVE_EVENT                        ((ULONG)0x00000040)
+TX_EVENT_FLAGS_GROUP sample_events;
+
 extern char g_mqtt_endpoint[];
 extern char g_iot_thing_name[];
 
@@ -134,6 +139,25 @@ static VOID connection_status_callback(NX_AZURE_IOT_HUB_CLIENT *hub_client_ptr, 
     }
 }
 
+static VOID message_receive_callback_command(NX_AZURE_IOT_HUB_CLIENT *hub_client_ptr, VOID *context)
+{
+    NX_PARAMETER_NOT_USED(hub_client_ptr);
+    NX_PARAMETER_NOT_USED(context);
+    tx_event_flags_set(&(sample_events), SAMPLE_COMMAND_RECEIVE_EVENT, TX_OR);
+}
+static VOID message_receive_callback_properties(NX_AZURE_IOT_HUB_CLIENT *hub_client_ptr, VOID *context)
+{
+
+    NX_PARAMETER_NOT_USED(hub_client_ptr);
+    NX_PARAMETER_NOT_USED(context);
+    tx_event_flags_set(&sample_events, SAMPLE_PROPERTIES_RECEIVE_EVENT, TX_OR);
+}
+static VOID message_receive_callback_writable_properties(NX_AZURE_IOT_HUB_CLIENT *hub_client_ptr, VOID *context)
+{
+    NX_PARAMETER_NOT_USED(hub_client_ptr);
+    NX_PARAMETER_NOT_USED(context);
+    tx_event_flags_set(&(sample_events), SAMPLE_WRITABLE_PROPERTIES_RECEIVE_EVENT, TX_OR);
+}
 static UINT sample_initialize_iothub(NX_AZURE_IOT_HUB_CLIENT *iothub_client_ptr)
 {
 UINT status;
@@ -178,14 +202,13 @@ UINT iothub_device_id_length = sizeof(DEVICE_ID) - 1;
         IotLog("Failed on nx_azure_iot_hub_client_initialize!: error code = 0x%08x\r\n", status);
         return(status);
     }
-/*
-    status = nx_azure_iot_hub_client_model_id_set(iothub_client_ptr, (UCHAR *)MODULE_ID, sizeof(MODULE_ID) - 1);
-
-    if(status!=0)
-    {
-        IotLog("digital twin modelId set!: error code = 0x%08x\r\n", status);
-    }
-*/
+/* Set the model id.  */
+  if ((status = nx_azure_iot_hub_client_model_id_set(iothub_client_ptr,
+                                                       (const UCHAR *)SAMPLE_PNP_MODEL_ID,
+                                                       sizeof(SAMPLE_PNP_MODEL_ID) - 1)))
+  {
+      IotLog("Failed on nx_azure_iot_hub_client_model_id_set!: error code = 0x%08x\r\n", status);
+  }
 #if (USE_DEVICE_CERTIFICATE == 1)
 
     /* Initialize the device certificate.  */
@@ -214,12 +237,43 @@ UINT iothub_device_id_length = sizeof(DEVICE_ID) - 1;
     }
 #endif /* USE_DEVICE_CERTIFICATE */
 
+    /* Enable command and properties features.  */
+    else if ((status = nx_azure_iot_hub_client_command_enable(iothub_client_ptr)))
+    {
+        IotLog("Failed on nx_azure_iot_hub_client_command_enable!: error code = 0x%08x\r\n", status);
+    }
+    else if ((status = nx_azure_iot_hub_client_properties_enable(iothub_client_ptr)))
+    {
+        IotLog("Failed on nx_azure_iot_hub_client_properties_enable!: error code = 0x%08x\r\n", status);
+    }
+
     /* Set connection status callback.  */
     else if ((status = nx_azure_iot_hub_client_connection_status_callback_set(iothub_client_ptr,
                                                                               connection_status_callback)))
     {
         IotLog("Failed on connection_status_callback!\r\n");
-    }    
+    }
+    else if ((status = nx_azure_iot_hub_client_receive_callback_set(iothub_client_ptr,
+                                                                        NX_AZURE_IOT_HUB_COMMAND,
+                                                                        message_receive_callback_command,
+                                                                        NX_NULL)))
+    {
+    IotLog("device command callback set!: error code = 0x%08x\r\n", status);
+    }
+    else if ((status = nx_azure_iot_hub_client_receive_callback_set(iothub_client_ptr,
+                                                                    NX_AZURE_IOT_HUB_PROPERTIES,
+                                                                    message_receive_callback_properties,
+                                                                    NX_NULL)))
+    {
+        IotLog("device properties callback set!: error code = 0x%08x\r\n", status);
+    }
+    else if ((status = nx_azure_iot_hub_client_receive_callback_set(iothub_client_ptr,
+                                                                    NX_AZURE_IOT_HUB_WRITABLE_PROPERTIES,
+                                                                    message_receive_callback_writable_properties,
+                                                                    NX_NULL)))
+    {
+        IotLog("device writable properties callback set!: error code = 0x%08x\r\n", status);
+    }
     else if ((status = nx_azure_iot_hub_client_cloud_message_enable(iothub_client_ptr)))
     {
         IotLog("C2D receive enable failed!: error code = 0x%08x\r\n", status);
@@ -280,9 +334,6 @@ void sample_entry(NX_IP *ip_ptr, NX_PACKET_POOL *pool_ptr, NX_DNS *dns_ptr, UINT
         return;
     }
     
-
-
-
     if ((status = sample_initialize_iothub(&iothub_client)))
     {
         IotLog("Failed to initialize iothub client: error code = 0x%08x\r\n", status);
@@ -300,6 +351,9 @@ void sample_entry(NX_IP *ip_ptr, NX_PACKET_POOL *pool_ptr, NX_DNS *dns_ptr, UINT
         return;
     }
     
+
+    tx_event_flags_create(&sample_events, (CHAR*)"sample_app_event");
+
 #ifndef DISABLE_TELEMETRY_SAMPLE
 
     /* Create Telemetry sample thread.  */

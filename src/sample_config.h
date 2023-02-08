@@ -25,10 +25,11 @@ extern   "C" {
    refer to https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-security-x509-get-started  */
 //#define USE_DEVICE_CERTIFICATE                      1
 
+
 /*
 TODO`s: Configure core settings of application for your IoTHub.
 */
-
+#define SAMPLE_PNP_MODEL_ID "dtmi:renesas:ra:ckra6m5:AZCKRA6M5ETH;1"
 /* Defined, DPS is enabled.  */
 #define ENABLE_DPS_SAMPLE
 /* Defined, telemetry is disabled.  */
@@ -46,19 +47,19 @@ TODO`s: Configure core settings of application for your IoTHub.
 /* These values can be picked from device connection string which is of format : HostName=<host1>;DeviceId=<device1>;SharedAccessKey=<key1>
    HOST_NAME can be set to <host1>,   DEVICE_ID can be set to <device1>,    DEVICE_SYMMETRIC_KEY can be set to <key1>.  */
 #ifndef HOST_NAME
-#define HOST_NAME                                   "RACLOUDHUB.azure-devices.net"
+#define HOST_NAME                                   "TECLOUDHUB.azure-devices.net"
 
 #endif /* HOST_NAME */
 
 #ifndef DEVICE_ID
-#define DEVICE_ID                                "V6CKkit_SAS"//"CK_RA6M5_X509"
+#define DEVICE_ID                                "CK_RA6M5_X509"
 
 #endif /* DEVICE_ID */
 
 #else /* !ENABLE_DPS_SAMPLE */
 /* Required when DPS is used.  */
 #ifndef ENDPOINT
-#define ENDPOINT                                    "RACLOUDDPS.azure-devices-provisioning.net"
+#define ENDPOINT                                    "global.azure-devices-provisioning.net"
 #endif /* ENDPOINT */
 
 #ifndef ID_SCOPE
@@ -66,7 +67,7 @@ TODO`s: Configure core settings of application for your IoTHub.
 #endif /* ID_SCOPE */
 
 #ifndef REGISTRATION_ID
-#define REGISTRATION_ID                             "f90c05d0-3eae-4d80-9024-36b1baf60b87"
+#define REGISTRATION_ID                             "bdc98bd8-1dbc-4a46-980d-186539e4498a"
 #endif /* REGISTRATION_ID */
 
 #endif /* ENABLE_DPS_SAMPLE */
@@ -77,13 +78,13 @@ TODO`s: Configure core settings of application for your IoTHub.
 /* IOT HUB */ #define DEVICE_SYMMETRIC_KEY                "acV1Ypr2nB/yxdw7ugNO0V9iRWetZLvIHa88jNGxocA="
 
 #else /* !ENABLE_DPS_SAMPLE */
-/* DPS  */    #define DEVICE_SYMMETRIC_KEY                        "KMuyuJFfo8x5iov6X/IFdYgeQOiyJZ594I0YEeCnN90="
+/* DPS  */    #define DEVICE_SYMMETRIC_KEY                        "WuEbq/iOT/a7lDd+5xf/ugjZ2ZhvjAcFE13bFtciBUo="
 #endif /* ENABLE_DPS_SAMPLE */
 #endif /* DEVICE_SYMMETRIC_KEY */
 
 /* Optional module ID.  */
 #ifndef MODULE_ID
-#define MODULE_ID                                  ""//"Thermostat;1"
+#define MODULE_ID                                   ""
 #endif /* MODULE_ID */
 
 #if (USE_DEVICE_CERTIFICATE == 1)

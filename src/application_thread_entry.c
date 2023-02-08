@@ -34,7 +34,12 @@ void temp_cold(void);
 void temp_warm(void);
 void temp_hot(void);
 void TricolorLEDOFF(void);
-
+void TC_RED_ON (void);
+void TC_RED_OFF (void);
+void TC_BLUE_ON (void);
+void TC_BLUE_OFF (void);
+void TC_GREEN_ON (void);
+void TC_GREEN_OFF (void);
 extern  unsigned int DecodeBASE64(char *incertbuff,unsigned char *outcerthexbuff);
 extern char g_certificate[];
 extern char g_private_key[];
@@ -224,20 +229,40 @@ void application_thread_entry(void)
                 case ID_LED_ACT:
                 {
                     IotLog("Topic Received from Cloud %s \r\n",mq_data.value.led_data.led_act_topic_msg);
-                    if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "3C_BLUE"))
+                    if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "TC_BLUE_ON"))
                     {
-                        temp_cold();
+                        TC_BLUE_ON();
                         IotLog("\r\n 3CBLUE LED ON\r\n");
                     }
-                    else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "3C_GREEN"))
+                    else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "TC_BLUE_OFF"))
                     {
-                        temp_warm();
+                        TC_BLUE_OFF();
+                        IotLog("\r\n 3CBLUE LED OFF\r\n");
+                    }
+                    else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "TC_GREEN_ON"))
+                    {
+                        TC_GREEN_ON();
                         IotLog("\r\n 3CGREEN LED ON\r\n");
                     }
-                    else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "3C_RED"))
+                    else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "TC_GREEN_OFF"))
                     {
-                        temp_hot();
+                        TC_GREEN_OFF();
+                        IotLog("\r\n 3CGREEN LED OFF\r\n");
+                    }
+                    else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "TC_RED_ON"))
+                    {
+                        TC_RED_ON();
                          IotLog("\r\n 3CRED LED ON\r\n");
+                    }
+                    else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "TC_RED_OFF"))
+                    {
+                        TC_RED_OFF();
+                         IotLog("\r\n 3CRED LED OFF\r\n");
+                    }
+                    else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "TC_NONE"))
+                    {
+                        TricolorLEDOFF();
+                         IotLog("\r\n TC ALL LED OFF\r\n");
                     }
                     else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "BLUE_ON"))
                     {
@@ -252,12 +277,12 @@ void application_thread_entry(void)
                     else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "RED_ON"))
 					 {
 						 led_on_off(LED_RED,LED_ON);
-						  IotLog("\r\n BLUE LED OFF\r\n");
+						  IotLog("\r\n RED LED ON\r\n");
 					 }
 					 else if (RESET_VALUE == strcmp ((char*) mq_data.value.led_data.led_act_topic_msg, "RED_OFF"))
 					 {
 						 led_on_off(LED_RED,LED_OFF);
-						  IotLog("\r\n BLUE LED OFF\r\n");
+						  IotLog("\r\n RED LED OFF\r\n");
 					 }
                     else
                     {
@@ -420,4 +445,52 @@ void TricolorLEDOFF(void)
     tx_thread_sleep (10);
     R_BSP_PinAccessDisable ();
 
+}
+
+void TC_RED_ON (void)
+{
+    R_BSP_PinAccessEnable ();
+    tx_thread_sleep (10);
+    R_BSP_PinWrite ((bsp_io_port_pin_t) BSP_IO_PORT_06_PIN_02, BSP_IO_LEVEL_LOW); // red
+    R_BSP_PinAccessDisable ();
+}
+
+void TC_RED_OFF (void)
+{
+    R_BSP_PinAccessEnable ();
+    tx_thread_sleep (10);
+    R_BSP_PinWrite ((bsp_io_port_pin_t) BSP_IO_PORT_06_PIN_02, BSP_IO_LEVEL_HIGH); // red
+    R_BSP_PinAccessDisable ();
+}
+
+void TC_BLUE_ON (void)
+{
+    R_BSP_PinAccessEnable ();
+    tx_thread_sleep (10);
+    R_BSP_PinWrite ((bsp_io_port_pin_t) BSP_IO_PORT_06_PIN_05, BSP_IO_LEVEL_LOW); // blue
+    R_BSP_PinAccessDisable ();
+}
+
+void TC_BLUE_OFF (void)
+{
+    R_BSP_PinAccessEnable ();
+    tx_thread_sleep (10);
+    R_BSP_PinWrite ((bsp_io_port_pin_t) BSP_IO_PORT_06_PIN_05, BSP_IO_LEVEL_HIGH); // blue
+    R_BSP_PinAccessDisable ();
+}
+
+void TC_GREEN_ON (void)
+{
+    R_BSP_PinAccessEnable ();
+    tx_thread_sleep (10);
+    R_BSP_PinWrite ((bsp_io_port_pin_t) BSP_IO_PORT_06_PIN_03, BSP_IO_LEVEL_LOW); // green
+    R_BSP_PinAccessDisable ();
+}
+
+void TC_GREEN_OFF (void)
+{
+    R_BSP_PinAccessEnable ();
+    tx_thread_sleep (10);
+    R_BSP_PinWrite ((bsp_io_port_pin_t) BSP_IO_PORT_06_PIN_03, BSP_IO_LEVEL_HIGH); // green
+    R_BSP_PinAccessDisable ();
 }

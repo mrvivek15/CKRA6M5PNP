@@ -36,7 +36,7 @@
 #define USR_MSQ_WAIT               (0xFF)
 #define LED_ON_SIZE                (2)
 #define LED_OFF_SIZE               (3)
-#define LED_MSG_SIZE               (9)
+#define LED_MSG_SIZE               (15)
 
 #define MAX_PROPERTY_LEN           (80)
 

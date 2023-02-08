@@ -1,7 +1,7 @@
 #include "ICM_Thread.h"
 #include "ICM_20948.h"
 #include "usr_app.h"
-
+#include "user_choice.h"
 /* ICM_Thread entry function */
 void ICM_Thread_entry(void)
 {

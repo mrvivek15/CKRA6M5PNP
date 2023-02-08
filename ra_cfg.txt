@@ -53,8 +53,8 @@ FSP Configuration
     Main Oscillator Wait Time: 8163 cycles
     
   RA Common
-    Main stack size (bytes): 0x1000
-    Heap size (bytes): 0x1000
+    Main stack size (bytes): 0x2000
+    Heap size (bytes): 0x2000
     MCU Vcc (mV): 3300
     Parameter checking: Disabled
     Assert Failures: Return FSP_ERR_ASSERTION
@@ -3217,7 +3217,7 @@ FSP Configuration
   Thread "Application Thread"
     Symbol: application_thread
     Name: Application Thread
-    Stack size (bytes): 0x1400
+    Stack size (bytes): 0x2400
     Priority: 1
     Auto start: Disabled
     Time slicing interval (ticks): 25
@@ -3410,6 +3410,14 @@ FSP Configuration
     Priority: 1
     Auto start: Disabled
     Time slicing interval (ticks): 25
+    
+  Thread "CommandRX_Thread"
+    Symbol: CommandRX_Thread
+    Name: CommandRX_Thread
+    Stack size (bytes): 2048
+    Priority: 4
+    Auto start: Disabled
+    Time slicing interval (ticks): 40
     
   Object "g_topic_queue Queue"
     Name: Topic Queue

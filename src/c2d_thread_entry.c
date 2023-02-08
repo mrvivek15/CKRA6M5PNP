@@ -27,6 +27,7 @@
 #include "sample_config.h"
 #include "usr_app.h"
 
+
 #define iothub_client client.iothub_client
 #define MAX_LED_COUNT 3
 
@@ -35,7 +36,8 @@ extern SAMPLE_CLIENT client;
 static const CHAR *led_properties[MAX_LED_COUNT][2] = {{ "LED", "ON" }};
 
 extern TX_THREAD HS3001_Thread;
-
+extern TX_THREAD CommandRX_Thread;
+mqtt_rx_payload_t action_data =  { '\0' };
 
 /* Cloud2Device Thread entry function */
 void c2d_thread_entry(void)
@@ -45,13 +47,14 @@ void c2d_thread_entry(void)
     UINT status = RESET_VALUE;
     USHORT property_buf_size = RESET_VALUE;
     const UCHAR *property_buf;
-    mqtt_rx_payload_t led_action_data =  { '\0' };
+
 
     /* TODO: add your own code here */
     status = tx_thread_resume (&HS3001_Thread);
+    status = tx_thread_resume (&CommandRX_Thread);
     while (true)
     {
-        if ((status = nx_azure_iot_hub_client_cloud_message_receive (&iothub_client, &packet_ptr, NX_WAIT_FOREVER)))
+       if ((status = nx_azure_iot_hub_client_cloud_message_receive (&iothub_client, &packet_ptr, NX_WAIT_FOREVER)))
         {
             IotLog("C2D receive failed!: error code = 0x%08x\r\n", status);
             break;
@@ -65,12 +68,14 @@ void c2d_thread_entry(void)
             IotLog("Receive message from Cloud: %s = %s\r\n", led_properties[0][0],property_buf);
         }
 
-        memset((char*) &led_action_data.value.led_data.led_act_topic_msg[0],0x00,LED_MSG_SIZE);
-        strncpy ((char*) &led_action_data.value.led_data.led_act_topic_msg[0],(char*) property_buf, property_buf_size);
+        memset((char*) &action_data.value.led_data.led_act_topic_msg[0],0x00,LED_MSG_SIZE);
+        strncpy ((char*) &action_data.value.led_data.led_act_topic_msg[0],(char*) property_buf, property_buf_size);
 
-        led_action_data.id = ID_LED_ACT;
+        action_data.id = ID_LED_ACT;
 
-        tx_queue_send (&g_topic_queue, &led_action_data, USR_MSQ_WAIT);
+        tx_queue_send (&g_topic_queue, &action_data, USR_MSQ_WAIT);
         nx_packet_release (packet_ptr);
+
+
     }
 }
