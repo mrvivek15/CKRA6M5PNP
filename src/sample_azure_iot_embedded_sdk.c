@@ -468,6 +468,12 @@ UINT status;
     }
 #endif /* USE_DEVICE_CERTIFICATE */
 
+    else if ((status = nx_azure_iot_provisioning_client_registration_payload_set(&prov_client, (UCHAR *)SAMPLE_PNP_DPS_PAYLOAD,
+                                                                                 sizeof(SAMPLE_PNP_DPS_PAYLOAD) - 1)))
+    {
+        printf("Failed on nx_azure_iot_provisioning_client_registration_payload_set!: error code = 0x%08x\r\n", status);
+    }
+
     /* Register device */
     else if ((status = nx_azure_iot_provisioning_client_register(&prov_client, NX_WAIT_FOREVER)))
     {

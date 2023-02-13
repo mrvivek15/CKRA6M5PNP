@@ -53,7 +53,7 @@ typedef struct
  be posted at an interval of every 10 sec*/
 
 /* User timer delay in seconds */
-#define USER_TIMER_DATA_POST_INTERVAL  10
+#define USER_TIMER_DATA_POST_INTERVAL  2
 
 /* Function declaration */
 //void g_user_timer_cb(timer_callback_args_t *p_args);

@@ -23,8 +23,8 @@
 #define SAMPLE_PNP_ENVIRONMENTAL_COMPONENT_NAME                       "Barometric"
 
 /* TODO : Add property name */
-static const CHAR sample_pnp_icp_pressure_name_property_name[] = "ICP10101-Pressure";
-static const CHAR sample_pnp_icp_temperature_property_name[] = "ICP10101-Temperature";
+static const CHAR sample_pnp_icp_pressure_name_property_name[] = "ICP10101_Pressure";
+static const CHAR sample_pnp_icp_temperature_property_name[] = "ICP10101_Temperature";
 
 
 static CHAR telemetry_buffer[256];
@@ -50,11 +50,11 @@ UINT sample_barometric_sensor_telemetry_messages_send(void)
         return (status);
     }
 
-    if ((status = (nx_azure_iot_hub_client_telemetry_component_set(packet_ptr, SAMPLE_PNP_ENVIRONMENTAL_COMPONENT_NAME, sizeof(SAMPLE_PNP_ENVIRONMENTAL_COMPONENT_NAME) - 1, NX_WAIT_FOREVER))))
+ /*   if ((status = (nx_azure_iot_hub_client_telemetry_component_set(packet_ptr, SAMPLE_PNP_ENVIRONMENTAL_COMPONENT_NAME, sizeof(SAMPLE_PNP_ENVIRONMENTAL_COMPONENT_NAME) - 1, NX_WAIT_FOREVER))))
     {
         return(status);
     }
-
+*/
      /* Build telemetry JSON payload.  */
      if (nx_azure_iot_json_writer_with_buffer_init(&json_writer, telemetry_buffer, sizeof(telemetry_buffer)))
      {

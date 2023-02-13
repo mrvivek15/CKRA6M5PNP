@@ -59,11 +59,11 @@ NX_AZURE_IOT_JSON_WRITER json_writer;
         return (status);
     }
 
-    if ((status = (nx_azure_iot_hub_client_telemetry_component_set(packet_ptr, SAMPLE_PNP_INERTIAL_COMPONENT_NAME, sizeof(SAMPLE_PNP_INERTIAL_COMPONENT_NAME) - 1, NX_WAIT_FOREVER))))
+/*    if ((status = (nx_azure_iot_hub_client_telemetry_component_set(packet_ptr, SAMPLE_PNP_INERTIAL_COMPONENT_NAME, sizeof(SAMPLE_PNP_INERTIAL_COMPONENT_NAME) - 1, NX_WAIT_FOREVER))))
     {
         return(status);
     }
-
+*/
      /* Build telemetry JSON payload.  */
      if (nx_azure_iot_json_writer_with_buffer_init(&json_writer, telemetry_buffer, sizeof(telemetry_buffer)))
      {

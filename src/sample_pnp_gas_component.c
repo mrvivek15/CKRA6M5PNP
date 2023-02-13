@@ -22,9 +22,9 @@
 #define THREE_DECIMAL_PLACE_DIGITS                                      (3)
 
 /* TODO : Add property name */
-static const CHAR sample_pnp_iaq_tvoc_property_name[] = "iaq-tvoh";
-static const CHAR sample_pnp_iaq_etoh_property_name[] = "iaq-etoh";
-static const CHAR sample_pnp_iaq_eco2_property_name[] = "iaq-eco2";
+static const CHAR sample_pnp_iaq_tvoc_property_name[] = "iaq_tvoh";
+static const CHAR sample_pnp_iaq_etoh_property_name[] = "iaq_etoh";
+static const CHAR sample_pnp_iaq_eco2_property_name[] = "iaq_eco2";
 
 static UCHAR telemetry_buffer[256];
 extern volatile iaq_demo_data_t g_iaq_data;
@@ -47,11 +47,11 @@ double temp;
         return(status);
     }
 
-    if ((status = nx_azure_iot_hub_client_telemetry_component_set(packet_ptr, SAMPLE_PNP_GAS_COMPONENT_NAME, sizeof(SAMPLE_PNP_GAS_COMPONENT_NAME) - 1, NX_WAIT_FOREVER)))
+/*    if ((status = nx_azure_iot_hub_client_telemetry_component_set(packet_ptr, SAMPLE_PNP_GAS_COMPONENT_NAME, sizeof(SAMPLE_PNP_GAS_COMPONENT_NAME) - 1, NX_WAIT_FOREVER)))
     {
         return(status);
     }
-
+*/
 
     /* Build telemetry JSON payload.  */
     if (nx_azure_iot_json_writer_with_buffer_init(&json_writer, telemetry_buffer, sizeof(telemetry_buffer)))

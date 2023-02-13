@@ -29,7 +29,8 @@ extern   "C" {
 /*
 TODO`s: Configure core settings of application for your IoTHub.
 */
-#define SAMPLE_PNP_MODEL_ID "dtmi:renesas:ra:ckra6m5:AZCKRA6M5ETH;1"
+#define SAMPLE_PNP_MODEL_ID             "dtmi:renesas:ra:ckra6m5:AZCKRA6M5ETH;1"
+#define SAMPLE_PNP_DPS_PAYLOAD          "{\"modelId\":\"" SAMPLE_PNP_MODEL_ID "\"}"
 /* Defined, DPS is enabled.  */
 #define ENABLE_DPS_SAMPLE
 /* Defined, telemetry is disabled.  */
