@@ -25726,7 +25726,7 @@ END GROUP
  .heap          0x2001a268     0x1000 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
                 0x2001b268                __HeapLimit = .
 
-.stack_dummy    0x2001b268     0x9000
+.stack_dummy    0x2001b268     0x8000
                 0x2001b268                . = ALIGN (0x8)
                 0x2001b268                __StackLimit = .
  *(.stack)
@@ -25752,18 +25752,18 @@ END GROUP
  .stack.ZMOD4510_Thread
                 0x20020e68      0x800 ./ra_gen/ZMOD4510_Thread.o
  .stack.application_thread
-                0x20021668     0x2400 ./ra_gen/application_thread.o
+                0x20021668     0x1400 ./ra_gen/application_thread.o
  .stack.c2d_thread
-                0x20023a68      0x800 ./ra_gen/c2d_thread.o
-                0x20024268                __StackTopAll = .
-                0x20024268                PROVIDE (__stack = __StackTopAll)
-                0x20024268                __RAM_segment_used_end__ = ALIGN (__StackTopAll, 0x4)
+                0x20022a68      0x800 ./ra_gen/c2d_thread.o
+                0x20023268                __StackTopAll = .
+                0x20023268                PROVIDE (__stack = __StackTopAll)
+                0x20023268                __RAM_segment_used_end__ = ALIGN (__StackTopAll, 0x4)
                 0x2006a000                __tz_RAM_C = DEFINED (RAM_NSC_START)?ABSOLUTE ((RAM_NSC_START - RAM_NS_BUFFER_BLOCK_LENGTH)):__RESERVE_NS_RAM?ABSOLUTE (RAM_NS_BUFFER_BLOCK_START):ALIGN (__RAM_segment_used_end__, 0x400)
                 0x2006a000                __tz_RAM_N = DEFINED (RAM_NS_START)?ABSOLUTE ((RAM_NS_START - RAM_NS_BUFFER_BLOCK_LENGTH)):__RESERVE_NS_RAM?ABSOLUTE (RAM_NS_BUFFER_BLOCK_START):ALIGN (__tz_RAM_C, 0x2000)
 
-.ns_buffer      0x20024270    0x5b810
+.ns_buffer      0x20023270    0x5c810
                 0x2006bc00                . = __RESERVE_NS_RAM?ABSOLUTE ((RAM_NS_BUFFER_START & 0xffffffe0)):.
- *fill*         0x20024270    0x47990 
+ *fill*         0x20023270    0x48990 
  *(.ns_buffer*)
  .ns_buffer.eth
                 0x2006bc00    0x13df8 ./src/usr_network.o

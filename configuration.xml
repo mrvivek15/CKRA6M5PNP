@@ -699,7 +699,7 @@
     <context id="rtos.threadx.thread.736494369">
       <property id="_symbol" value="application_thread"/>
       <property id="rtos.threadx.thread.name" value="Application Thread"/>
-      <property id="rtos.threadx.thread.stack" value="0x2400"/>
+      <property id="rtos.threadx.thread.stack" value="0x1400"/>
       <property id="rtos.threadx.thread.priority" value="1"/>
       <property id="rtos.threadx.thread.autostart" value="rtos.threadx.thread.autostart.disabled"/>
       <property id="rtos.threadx.thread.timeslice" value="25"/>

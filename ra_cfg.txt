@@ -3217,7 +3217,7 @@ FSP Configuration
   Thread "Application Thread"
     Symbol: application_thread
     Name: Application Thread
-    Stack size (bytes): 0x2400
+    Stack size (bytes): 0x1400
     Priority: 1
     Auto start: Disabled
     Time slicing interval (ticks): 25

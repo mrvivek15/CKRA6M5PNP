@@ -64,11 +64,11 @@ TODO`s: Configure core settings of application for your IoTHub.
 #endif /* ENDPOINT */
 
 #ifndef ID_SCOPE
-#define ID_SCOPE                                    "0ne000FFA42"
+#define ID_SCOPE                                    "0ne000FFA42"//"0ne000FFA42"
 #endif /* ID_SCOPE */
 
 #ifndef REGISTRATION_ID
-#define REGISTRATION_ID                             "bdc98bd8-1dbc-4a46-980d-186539e4498a"
+#define REGISTRATION_ID                            "bfbd7f01-892f-4104-9a7e-a9e2f729e87d"// "bdc98bd8-1dbc-4a46-980d-186539e4498a"
 #endif /* REGISTRATION_ID */
 
 #endif /* ENABLE_DPS_SAMPLE */
@@ -79,7 +79,7 @@ TODO`s: Configure core settings of application for your IoTHub.
 /* IOT HUB */ #define DEVICE_SYMMETRIC_KEY                "acV1Ypr2nB/yxdw7ugNO0V9iRWetZLvIHa88jNGxocA="
 
 #else /* !ENABLE_DPS_SAMPLE */
-/* DPS  */    #define DEVICE_SYMMETRIC_KEY                        "WuEbq/iOT/a7lDd+5xf/ugjZ2ZhvjAcFE13bFtciBUo="
+/* DPS  */    #define DEVICE_SYMMETRIC_KEY                       "7T0gR63X3LsmMPEHFvLoy4b52/qz38aRA01saB+kxLs="// "WuEbq/iOT/a7lDd+5xf/ugjZ2ZhvjAcFE13bFtciBUo="
 #endif /* ENABLE_DPS_SAMPLE */
 #endif /* DEVICE_SYMMETRIC_KEY */
 
