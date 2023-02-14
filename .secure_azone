@@ -38,7 +38,6 @@
         </peripheral>
         <peripheral name="PORT3" group="PORT">
             <slot name="P300" secure="false"/>
-            <slot name="P302" secure="false"/>
             <slot name="P303" secure="false"/>
             <slot name="P306" secure="false"/>
             <slot name="P307" secure="false"/>
@@ -99,9 +98,6 @@
         <peripheral name="PORT8" group="PORT">
             <slot name="P803" secure="false"/>
             <slot name="P804" secure="false"/>
-        </peripheral>
-        <peripheral name="PORT9" group="PORT">
-            <slot name="P907" secure="false"/>
         </peripheral>
         <peripheral name="PORTA" group="PORT">
             <slot name="PA08" secure="false"/>

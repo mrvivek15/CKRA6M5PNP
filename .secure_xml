@@ -90,8 +90,6 @@
       <configSetting altId="iic1.scl.p512" configurationId="iic1.scl"/>
       <configSetting altId="iic1.sda.p511" configurationId="iic1.sda"/>
       <configSetting altId="irq0.irq04.p402" configurationId="irq0.irq04" isUsedByDriver="true"/>
-      <configSetting altId="irq0.irq05.p302" configurationId="irq0.irq05"/>
-      <configSetting altId="irq0.irq10.p907" configurationId="irq0.irq10"/>
       <configSetting altId="irq0.irq14.p403" configurationId="irq0.irq14" isUsedByDriver="true"/>
       <configSetting altId="irq0.irq15.p404" configurationId="irq0.irq15" isUsedByDriver="true"/>
       <configSetting altId="p004.input" configurationId="p004"/>

@@ -18992,7 +18992,7 @@ END GROUP
                 0x00000000                __itcm_data_end__ = .
                 0x00000000                __tz_ITCM_N = DEFINED (ITCM_NS_START)?ABSOLUTE (ITCM_NS_START):ALIGN (__itcm_data_end__, 0x2000)
 
-.text           0x00000000    0x9876c
+.text           0x00000000    0x9875c
                 0x00000000                __tz_FLASH_S = ABSOLUTE (FLASH_START)
                 0x00000000                __ROM_Start = .
  *(.fixed_vectors*)
@@ -24142,471 +24142,471 @@ END GROUP
                 0x00092ce4                g_timer2
  .rodata        0x00092cf0       0x14 ./ra_gen/main.o
  .rodata.g_bsp_pin_cfg_data
-                0x00092d04      0x290 ./ra_gen/pin_data.o
+                0x00092d04      0x280 ./ra_gen/pin_data.o
                 0x00092d04                g_bsp_pin_cfg_data
  .rodata.g_bsp_pin_cfg
-                0x00092f94        0x8 ./ra_gen/pin_data.o
-                0x00092f94                g_bsp_pin_cfg
+                0x00092f84        0x8 ./ra_gen/pin_data.o
+                0x00092f84                g_bsp_pin_cfg
  .rodata.g_interrupt_event_link_select
-                0x00092f9c       0xc0 ./ra_gen/vector_data.o
-                0x00092f9c                g_interrupt_event_link_select
+                0x00092f8c       0xc0 ./ra_gen/vector_data.o
+                0x00092f8c                g_interrupt_event_link_select
  .rodata.nx_secure_tls_supported_versions
-                0x0009305c       0x10 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_check_protocol_version.o
- .rodata        0x0009306c       0x1e ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_generate_keys.o
- *fill*         0x0009308a        0x2 ff
- .rodata        0x0009308c        0xa ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_initialize.o
- *fill*         0x00093096        0x2 ff
- .rodata        0x00093098       0x20 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_process_finished.o
+                0x0009304c       0x10 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_check_protocol_version.o
+ .rodata        0x0009305c       0x1e ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_generate_keys.o
+ *fill*         0x0009307a        0x2 ff
+ .rodata        0x0009307c        0xa ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_initialize.o
+ *fill*         0x00093086        0x2 ff
+ .rodata        0x00093088       0x20 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_process_finished.o
  .rodata._NX_SECURE_OID_SHA256
-                0x000930b8       0x13 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_send_certificate_verify.o
- *fill*         0x000930cb        0x1 ff
- .rodata        0x000930cc       0x20 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_send_finished.o
- .rodata        0x000930ec       0x13 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_session_create_ext.o
- *fill*         0x000930ff        0x1 ff
+                0x000930a8       0x13 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_send_certificate_verify.o
+ *fill*         0x000930bb        0x1 ff
+ .rodata        0x000930bc       0x20 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_send_finished.o
+ .rodata        0x000930dc       0x13 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_tls_session_create_ext.o
+ *fill*         0x000930ef        0x1 ff
  .rodata.days_before_month
-                0x00093100       0x30 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_expiration_check.o
+                0x000930f0       0x30 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_expiration_check.o
  .rodata.NX_SECURE_X509_OID_RSA
-                0x00093130        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093139        0x3 ff
+                0x00093120        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093129        0x3 ff
  .rodata.NX_SECURE_X509_OID_RSA_MD5
-                0x0009313c        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093145        0x3 ff
+                0x0009312c        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093135        0x3 ff
  .rodata.NX_SECURE_X509_OID_RSA_SHA1
-                0x00093148        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093151        0x3 ff
+                0x00093138        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093141        0x3 ff
  .rodata.NX_SECURE_X509_OID_RSA_SHA256
-                0x00093154        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x0009315d        0x3 ff
+                0x00093144        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x0009314d        0x3 ff
  .rodata.NX_SECURE_X509_OID_RSA_SHA384
-                0x00093160        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093169        0x3 ff
+                0x00093150        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093159        0x3 ff
  .rodata.NX_SECURE_X509_OID_RSA_SHA512
-                0x0009316c        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093175        0x3 ff
+                0x0009315c        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093165        0x3 ff
  .rodata.NX_SECURE_X509_OID_DH
-                0x00093178        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x0009317f        0x1 ff
+                0x00093168        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x0009316f        0x1 ff
  .rodata.NX_SECURE_X509_OID_DSS_SHA1
-                0x00093180        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093187        0x1 ff
+                0x00093170        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093177        0x1 ff
  .rodata.NX_SECURE_X509_OID_COMMON_NAME
+                0x00093178        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x0009317b        0x1 ff
+ .rodata.NX_SECURE_X509_OID_SURNAME
+                0x0009317c        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x0009317f        0x1 ff
+ .rodata.NX_SECURE_X509_OID_SERIAL_NUMBER
+                0x00093180        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093183        0x1 ff
+ .rodata.NX_SECURE_X509_OID_COUNTRY_NAME
+                0x00093184        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093187        0x1 ff
+ .rodata.NX_SECURE_X509_OID_LOCALITY
                 0x00093188        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x0009318b        0x1 ff
- .rodata.NX_SECURE_X509_OID_SURNAME
+ .rodata.NX_SECURE_X509_OID_STATE
                 0x0009318c        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x0009318f        0x1 ff
- .rodata.NX_SECURE_X509_OID_SERIAL_NUMBER
+ .rodata.NX_SECURE_X509_OID_ORGANIZATION
                 0x00093190        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x00093193        0x1 ff
- .rodata.NX_SECURE_X509_OID_COUNTRY_NAME
+ .rodata.NX_SECURE_X509_OID_ORG_UINT
                 0x00093194        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x00093197        0x1 ff
- .rodata.NX_SECURE_X509_OID_LOCALITY
+ .rodata.NX_SECURE_X509_OID_TITLE
                 0x00093198        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x0009319b        0x1 ff
- .rodata.NX_SECURE_X509_OID_STATE
+ .rodata.NX_SECURE_X509_OID_NAME
                 0x0009319c        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x0009319f        0x1 ff
- .rodata.NX_SECURE_X509_OID_ORGANIZATION
+ .rodata.NX_SECURE_X509_OID_GIVEN_NAME
                 0x000931a0        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931a3        0x1 ff
- .rodata.NX_SECURE_X509_OID_ORG_UINT
+ .rodata.NX_SECURE_X509_OID_INITIALS
                 0x000931a4        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931a7        0x1 ff
- .rodata.NX_SECURE_X509_OID_TITLE
+ .rodata.NX_SECURE_X509_OID_GENERATION
                 0x000931a8        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931ab        0x1 ff
- .rodata.NX_SECURE_X509_OID_NAME
+ .rodata.NX_SECURE_X509_OID_DN_QUALIFIER
                 0x000931ac        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931af        0x1 ff
- .rodata.NX_SECURE_X509_OID_GIVEN_NAME
+ .rodata.NX_SECURE_X509_OID_PSEUDONYM
                 0x000931b0        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931b3        0x1 ff
- .rodata.NX_SECURE_X509_OID_INITIALS
+ .rodata.NX_SECURE_X509_OID_DIRECTORY_ATTRIBUTES
                 0x000931b4        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931b7        0x1 ff
- .rodata.NX_SECURE_X509_OID_GENERATION
+ .rodata.NX_SECURE_X509_OID_SUBJECT_KEY_ID
                 0x000931b8        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931bb        0x1 ff
- .rodata.NX_SECURE_X509_OID_DN_QUALIFIER
+ .rodata.NX_SECURE_X509_OID_KEY_USAGE
                 0x000931bc        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931bf        0x1 ff
- .rodata.NX_SECURE_X509_OID_PSEUDONYM
+ .rodata.NX_SECURE_X509_OID_SUBJECT_ALT_NAME
                 0x000931c0        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931c3        0x1 ff
- .rodata.NX_SECURE_X509_OID_DIRECTORY_ATTRIBUTES
+ .rodata.NX_SECURE_X509_OID_ISSUER_ALT_NAME
                 0x000931c4        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931c7        0x1 ff
- .rodata.NX_SECURE_X509_OID_SUBJECT_KEY_ID
+ .rodata.NX_SECURE_X509_OID_BASIC_CONSTRAINTS
                 0x000931c8        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931cb        0x1 ff
- .rodata.NX_SECURE_X509_OID_KEY_USAGE
+ .rodata.NX_SECURE_X509_OID_NAME_CONSTRAINTS
                 0x000931cc        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931cf        0x1 ff
- .rodata.NX_SECURE_X509_OID_SUBJECT_ALT_NAME
+ .rodata.NX_SECURE_X509_OID_CRL_DISTRIBUTION
                 0x000931d0        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931d3        0x1 ff
- .rodata.NX_SECURE_X509_OID_ISSUER_ALT_NAME
+ .rodata.NX_SECURE_X509_OID_CERTIFICATE_POLICIES
                 0x000931d4        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931d7        0x1 ff
- .rodata.NX_SECURE_X509_OID_BASIC_CONSTRAINTS
-                0x000931d8        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x000931db        0x1 ff
- .rodata.NX_SECURE_X509_OID_NAME_CONSTRAINTS
+ .rodata.NX_SECURE_X509_OID_ANY_POLICY
+                0x000931d8        0x4 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ .rodata.NX_SECURE_X509_OID_CERT_POLICY_MAPPINGS
                 0x000931dc        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931df        0x1 ff
- .rodata.NX_SECURE_X509_OID_CRL_DISTRIBUTION
+ .rodata.NX_SECURE_X509_OID_AUTHORITY_KEY_ID
                 0x000931e0        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931e3        0x1 ff
- .rodata.NX_SECURE_X509_OID_CERTIFICATE_POLICIES
+ .rodata.NX_SECURE_X509_OID_POLICY_CONSTRAINTS
                 0x000931e4        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931e7        0x1 ff
- .rodata.NX_SECURE_X509_OID_ANY_POLICY
-                0x000931e8        0x4 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- .rodata.NX_SECURE_X509_OID_CERT_POLICY_MAPPINGS
-                0x000931ec        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x000931ef        0x1 ff
- .rodata.NX_SECURE_X509_OID_AUTHORITY_KEY_ID
+ .rodata.NX_SECURE_X509_OID_EXTENDED_KEY_USAGE
+                0x000931e8        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x000931eb        0x1 ff
+ .rodata.NX_SECURE_X509_OID_ANY_EXTENDED_KEY_USAGE
+                0x000931ec        0x4 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ .rodata.NX_SECURE_X509_OID_FRESHEST_CRL
                 0x000931f0        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931f3        0x1 ff
- .rodata.NX_SECURE_X509_OID_POLICY_CONSTRAINTS
+ .rodata.NX_SECURE_X509_OID_INHIBIT_ANYPOLICY
                 0x000931f4        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x000931f7        0x1 ff
- .rodata.NX_SECURE_X509_OID_EXTENDED_KEY_USAGE
-                0x000931f8        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x000931fb        0x1 ff
- .rodata.NX_SECURE_X509_OID_ANY_EXTENDED_KEY_USAGE
-                0x000931fc        0x4 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- .rodata.NX_SECURE_X509_OID_FRESHEST_CRL
-                0x00093200        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093203        0x1 ff
- .rodata.NX_SECURE_X509_OID_INHIBIT_ANYPOLICY
-                0x00093204        0x3 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093207        0x1 ff
  .rodata.NX_SECURE_X509_OID_PKIX_EXT_PREFIX
-                0x00093208        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x0009320f        0x1 ff
+                0x000931f8        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x000931ff        0x1 ff
  .rodata.NX_SECURE_X509_OID_PKIX_AIA
-                0x00093210        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093200        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_PKIX_SIA
-                0x00093218        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093208        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_PKIX_QT
-                0x00093220        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093227        0x1 ff
+                0x00093210        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093217        0x1 ff
  .rodata.NX_SECURE_X509_OID_PKIX_QT_CPS
-                0x00093228        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093218        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_PKIX_QT_UNOTICE
-                0x00093230        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093220        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_PKIX_KP
-                0x00093238        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x0009323f        0x1 ff
+                0x00093228        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x0009322f        0x1 ff
  .rodata.NX_SECURE_X509_OID_PKIX_KP_SERVER_AUTH
-                0x00093240        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093230        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_PKIX_KP_CLIENT_AUTH
-                0x00093248        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093238        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_PKIX_KP_CODE_SIGNING
-                0x00093250        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093240        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_PKIX_KP_EMAIL_PROTECT
-                0x00093258        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093248        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_PKIX_KP_TIME_STAMPING
-                0x00093260        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093250        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_PKIX_KP_OCSP_SIGNING
-                0x00093268        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093258        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_NETSCAPE_COMMENT
-                0x00093270        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093279        0x3 ff
+                0x00093260        0x9 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093269        0x3 ff
  .rodata.NX_SECURE_X509_OID_EC
-                0x0009327c        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x00093283        0x1 ff
+                0x0009326c        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093273        0x1 ff
  .rodata.NX_SECURE_X509_OID_SECP192R1
-                0x00093284        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x00093274        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_SECP224R1
+                0x0009327c        0x5 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093281        0x3 ff
+ .rodata.NX_SECURE_X509_OID_SECP256R1
+                0x00093284        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ .rodata.NX_SECURE_X509_OID_SECP384R1
                 0x0009328c        0x5 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  *fill*         0x00093291        0x3 ff
- .rodata.NX_SECURE_X509_OID_SECP256R1
-                0x00093294        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- .rodata.NX_SECURE_X509_OID_SECP384R1
-                0x0009329c        0x5 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x000932a1        0x3 ff
  .rodata.NX_SECURE_X509_OID_SECP521R1
-                0x000932a4        0x5 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x000932a9        0x3 ff
+                0x00093294        0x5 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x00093299        0x3 ff
  .rodata.NX_SECURE_X509_OID_ECDSA_SHA1
-                0x000932ac        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
- *fill*         0x000932b3        0x1 ff
+                0x0009329c        0x7 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+ *fill*         0x000932a3        0x1 ff
  .rodata.NX_SECURE_X509_OID_ECDSA_SHA224
-                0x000932b4        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x000932a4        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_ECDSA_SHA256
-                0x000932bc        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x000932ac        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_ECDSA_SHA384
-                0x000932c4        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x000932b4        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.NX_SECURE_X509_OID_ECDSA_SHA512
-                0x000932cc        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
+                0x000932bc        0x8 ./ra/microsoft/azure-rtos/netxduo/nx_secure/src/nx_secure_x509_oid_parse.o
  .rodata.nx_crypto_tls_ecdhe_rsa_with_aes_128_cbc_sha256
-                0x000932d4       0x4c ./ra/microsoft/azure-rtos/netxduo/crypto_libraries/src/nx_crypto_generic_ciphersuites.o
-                0x000932d4                nx_crypto_tls_ecdhe_rsa_with_aes_128_cbc_sha256
+                0x000932c4       0x4c ./ra/microsoft/azure-rtos/netxduo/crypto_libraries/src/nx_crypto_generic_ciphersuites.o
+                0x000932c4                nx_crypto_tls_ecdhe_rsa_with_aes_128_cbc_sha256
  .rodata.nx_crypto_x509_rsa_sha_256
-                0x00093320       0x4c ./ra/microsoft/azure-rtos/netxduo/crypto_libraries/src/nx_crypto_generic_ciphersuites.o
-                0x00093320                nx_crypto_x509_rsa_sha_256
+                0x00093310       0x4c ./ra/microsoft/azure-rtos/netxduo/crypto_libraries/src/nx_crypto_generic_ciphersuites.o
+                0x00093310                nx_crypto_x509_rsa_sha_256
  .rodata.nx_crypto_x509_ecdsa_sha_256
-                0x0009336c       0x4c ./ra/microsoft/azure-rtos/netxduo/crypto_libraries/src/nx_crypto_generic_ciphersuites.o
-                0x0009336c                nx_crypto_x509_ecdsa_sha_256
+                0x0009335c       0x4c ./ra/microsoft/azure-rtos/netxduo/crypto_libraries/src/nx_crypto_generic_ciphersuites.o
+                0x0009335c                nx_crypto_x509_ecdsa_sha_256
  .rodata._nx_ipv6_unspecified_address
-                0x000933b8       0x10 ./ra/microsoft/azure-rtos/netxduo/common/src/nx_icmpv6_send_ns.o
+                0x000933a8       0x10 ./ra/microsoft/azure-rtos/netxduo/common/src/nx_icmpv6_send_ns.o
  .rodata._nx_ipv6_all_router_address
-                0x000933c8       0x10 ./ra/microsoft/azure-rtos/netxduo/common/src/nx_icmpv6_send_rs.o
- .rodata        0x000933d8       0x19 ./ra/microsoft/azure-rtos/netxduo/common/src/nx_ip_create.o
- *fill*         0x000933f1        0x3 ff
- .rodata        0x000933f4      0x141 ./ra/microsoft/azure-rtos/netxduo/addons/sntp/nxd_sntp_client.o
- *fill*         0x00093535        0x3 ff
- .rodata        0x00093538       0x21 ./ra/microsoft/azure-rtos/netxduo/addons/mqtt/nxd_mqtt_client.o
- *fill*         0x00093559        0x3 ff
- .rodata        0x0009355c       0x21 ./ra/microsoft/azure-rtos/netxduo/addons/dns/nxd_dns.o
- *fill*         0x0009357d        0x3 ff
- .rodata        0x00093580       0x3b ./ra/microsoft/azure-rtos/netxduo/addons/dhcp/nxd_dhcp_client.o
- *fill*         0x000935bb        0x1 ff
- .rodata        0x000935bc        0x6 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_common.o
- *fill*         0x000935c2        0x2 ff
+                0x000933b8       0x10 ./ra/microsoft/azure-rtos/netxduo/common/src/nx_icmpv6_send_rs.o
+ .rodata        0x000933c8       0x19 ./ra/microsoft/azure-rtos/netxduo/common/src/nx_ip_create.o
+ *fill*         0x000933e1        0x3 ff
+ .rodata        0x000933e4      0x141 ./ra/microsoft/azure-rtos/netxduo/addons/sntp/nxd_sntp_client.o
+ *fill*         0x00093525        0x3 ff
+ .rodata        0x00093528       0x21 ./ra/microsoft/azure-rtos/netxduo/addons/mqtt/nxd_mqtt_client.o
+ *fill*         0x00093549        0x3 ff
+ .rodata        0x0009354c       0x21 ./ra/microsoft/azure-rtos/netxduo/addons/dns/nxd_dns.o
+ *fill*         0x0009356d        0x3 ff
+ .rodata        0x00093570       0x3b ./ra/microsoft/azure-rtos/netxduo/addons/dhcp/nxd_dhcp_client.o
+ *fill*         0x000935ab        0x1 ff
+ .rodata        0x000935ac        0x6 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_common.o
+ *fill*         0x000935b2        0x2 ff
  .rodata.hub_client_param_separator_span
-                0x000935c4        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_common.o
+                0x000935b4        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_common.o
  .rodata.hub_client_param_equals_span
-                0x000935cc        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_common.o
- .rodata        0x000935d4       0x54 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
+                0x000935bc        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_common.o
+ .rodata        0x000935c4       0x54 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
  .rodata.hub_client_param_separator_span
-                0x00093628        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
+                0x00093618        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
  .rodata.hub_client_param_equals_span
-                0x00093630        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
+                0x00093620        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
  .rodata.hub_digital_twin_model_id
-                0x00093638        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
+                0x00093628        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
  .rodata.hub_service_api_version
-                0x00093640        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
+                0x00093630        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
  .rodata.client_sdk_device_client_type_name
-                0x00093648        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
+                0x00093638        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
  .rodata.client_sdk_version_default_value
-                0x00093650        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
- .rodata        0x00093658       0x17 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_c2d.o
- *fill*         0x0009366f        0x1 ff
+                0x00093640        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client.o
+ .rodata        0x00093648       0x17 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_c2d.o
+ *fill*         0x0009365f        0x1 ff
  .rodata.c2d_topic_suffix
-                0x00093670        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_c2d.o
- .rodata        0x00093678        0x2 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_commands.o
- *fill*         0x0009367a        0x2 ff
+                0x00093660        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_c2d.o
+ .rodata        0x00093668        0x2 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_commands.o
+ *fill*         0x0009366a        0x2 ff
  .rodata.command_separator
-                0x0009367c        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_commands.o
- .rodata        0x00093684       0x2c ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
+                0x0009366c        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_commands.o
+ .rodata        0x00093674       0x2c ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
  .rodata.methods_topic_prefix
-                0x000936b0        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
+                0x000936a0        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
  .rodata.methods_topic_filter_suffix
-                0x000936b8        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
+                0x000936a8        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
  .rodata.methods_response_topic_result
-                0x000936c0        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
+                0x000936b0        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
  .rodata.methods_response_topic_properties
-                0x000936c8        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
- .rodata        0x000936d0       0x47 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
- *fill*         0x00093717        0x1 ff
+                0x000936b8        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_methods.o
+ .rodata        0x000936c0       0x47 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
+ *fill*         0x00093707        0x1 ff
  .rodata.devices_string
-                0x00093718        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
+                0x00093708        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
  .rodata.modules_string
+                0x00093710        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
+ .rodata.skn_string
+                0x00093718        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
+ .rodata.sr_string
                 0x00093720        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
- .rodata.skn_string
+ .rodata.sig_string
                 0x00093728        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
- .rodata.sr_string
+ .rodata.se_string
                 0x00093730        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
- .rodata.sig_string
-                0x00093738        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
- .rodata.se_string
-                0x00093740        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_sas.o
- .rodata        0x00093748       0x2a ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_telemetry.o
- *fill*         0x00093772        0x2 ff
+ .rodata        0x00093738       0x2a ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_telemetry.o
+ *fill*         0x00093762        0x2 ff
  .rodata.telemetry_topic_prefix
-                0x00093774        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_telemetry.o
+                0x00093764        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_telemetry.o
  .rodata.telemetry_topic_modules_mid
-                0x0009377c        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_telemetry.o
+                0x0009376c        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_telemetry.o
  .rodata.telemetry_topic_suffix
-                0x00093784        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_telemetry.o
- .rodata        0x0009378c       0x78 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
+                0x00093774        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_telemetry.o
+ .rodata        0x0009377c       0x78 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
  .rodata.az_iot_hub_client_request_id_span
-                0x00093804        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
+                0x000937f4        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
  .rodata.az_iot_hub_twin_topic_prefix
-                0x0009380c        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
+                0x000937fc        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
  .rodata.az_iot_hub_twin_response_sub_topic
-                0x00093814        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
+                0x00093804        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
  .rodata.az_iot_hub_twin_version_prop
-                0x0009381c        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
+                0x0009380c        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
  .rodata.az_iot_hub_twin_patch_sub_topic
-                0x00093824        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
- .rodata        0x0009382c      0x244 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client.o
+                0x00093814        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_hub_client_twin.o
+ .rodata        0x0009381c      0x244 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client.o
  .rodata.str_put_iotdps_register
-                0x00093a70        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client.o
+                0x00093a60        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client.o
  .rodata.str_get_iotdps_get_operationstatus
-                0x00093a78        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client.o
- .rodata        0x00093a80       0x3b ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
- *fill*         0x00093abb        0x1 ff
+                0x00093a68        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client.o
+ .rodata        0x00093a70       0x3b ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
+ *fill*         0x00093aab        0x1 ff
  .rodata.resources_string
-                0x00093abc        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
+                0x00093aac        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
  .rodata.sr_string
-                0x00093ac4        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
+                0x00093ab4        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
  .rodata.sig_string
-                0x00093acc        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
+                0x00093abc        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
  .rodata.skn_string
-                0x00093ad4        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
+                0x00093ac4        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
  .rodata.se_string
-                0x00093adc        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
- .rodata        0x00093ae4       0x50 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/core/az_json_reader.o
+                0x00093acc        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/iot/az_iot_provisioning_client_sas.o
+ .rodata        0x00093ad4       0x50 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/core/az_json_reader.o
  .rodata.json_delimiters
-                0x00093b34        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/core/az_json_reader.o
- .rodata        0x00093b3c      0x380 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/nx_azure_iot.o
- .rodata        0x00093ebc     0x1834 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/nx_azure_iot_hub_client.o
- .rodata        0x000956f0      0x313 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/nx_azure_iot_json_writer.o
- *fill*         0x00095a03        0x1 ff
- .rodata        0x00095a04      0xa00 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/nx_azure_iot_provisioning_client.o
+                0x00093b24        0x8 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/azure-sdk-for-c/sdk/src/azure/core/az_json_reader.o
+ .rodata        0x00093b2c      0x380 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/nx_azure_iot.o
+ .rodata        0x00093eac     0x1834 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/nx_azure_iot_hub_client.o
+ .rodata        0x000956e0      0x313 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/nx_azure_iot_json_writer.o
+ *fill*         0x000959f3        0x1 ff
+ .rodata        0x000959f4      0xa00 ./ra/microsoft/azure-rtos/netxduo/addons/azure_iot/nx_azure_iot_provisioning_client.o
  .rodata.g_zmod4xxx_on_zmod4510_oaq_1st_gen
-                0x00096404       0x3c ./ra/fsp/src/rm_zmod4xxx/oaq_1st_gen/rm_zmod4510_oaq_1st_gen.o
-                0x00096404                g_zmod4xxx_on_zmod4510_oaq_1st_gen
+                0x000963f4       0x3c ./ra/fsp/src/rm_zmod4xxx/oaq_1st_gen/rm_zmod4510_oaq_1st_gen.o
+                0x000963f4                g_zmod4xxx_on_zmod4510_oaq_1st_gen
  .rodata.g_zmod4xxx_on_zmod4410_iaq_1st_gen
-                0x00096440       0x3c ./ra/fsp/src/rm_zmod4xxx/iaq_1st_gen/rm_zmod4410_iaq_1st_gen.o
-                0x00096440                g_zmod4xxx_on_zmod4410_iaq_1st_gen
+                0x00096430       0x3c ./ra/fsp/src/rm_zmod4xxx/iaq_1st_gen/rm_zmod4410_iaq_1st_gen.o
+                0x00096430                g_zmod4xxx_on_zmod4410_iaq_1st_gen
  .rodata.g_zmod4xxx_on_zmod4xxx
-                0x0009647c       0x3c ./ra/fsp/src/rm_zmod4xxx/rm_zmod4xxx.o
-                0x0009647c                g_zmod4xxx_on_zmod4xxx
- .rodata        0x000964b8       0x2a ./ra/fsp/src/rm_netxduo_ether/rm_netxduo_ether.o
- *fill*         0x000964e2        0x2 ff
- .rodata        0x000964e4      0x364 ./ra/fsp/src/rm_netx_secure_crypto/nx_crypto_ec_alt.o
+                0x0009646c       0x3c ./ra/fsp/src/rm_zmod4xxx/rm_zmod4xxx.o
+                0x0009646c                g_zmod4xxx_on_zmod4xxx
+ .rodata        0x000964a8       0x2a ./ra/fsp/src/rm_netxduo_ether/rm_netxduo_ether.o
+ *fill*         0x000964d2        0x2 ff
+ .rodata        0x000964d4      0x364 ./ra/fsp/src/rm_netx_secure_crypto/nx_crypto_ec_alt.o
  .rodata._nx_crypto_ec_secp384r1
-                0x00096848       0xa8 ./ra/fsp/src/rm_netx_secure_crypto/nx_crypto_ec_alt.o
-                0x00096848                _nx_crypto_ec_secp384r1
+                0x00096838       0xa8 ./ra/fsp/src/rm_netx_secure_crypto/nx_crypto_ec_alt.o
+                0x00096838                _nx_crypto_ec_secp384r1
  .rodata._nx_crypto_sha256_padding
-                0x000968f0       0x40 ./ra/fsp/src/rm_netx_secure_crypto/nx_crypto_sha2_alt.o
-                0x000968f0                _nx_crypto_sha256_padding
+                0x000968e0       0x40 ./ra/fsp/src/rm_netx_secure_crypto/nx_crypto_sha2_alt.o
+                0x000968e0                _nx_crypto_sha256_padding
  .rodata.g_hs300x_on_hs300x
-                0x00096930       0x24 ./ra/fsp/src/rm_hs300x/rm_hs300x.o
-                0x00096930                g_hs300x_on_hs300x
+                0x00096920       0x24 ./ra/fsp/src/rm_hs300x/rm_hs300x.o
+                0x00096920                g_hs300x_on_hs300x
  .rodata.g_comms_on_comms_i2c
-                0x00096954       0x14 ./ra/fsp/src/rm_comms_i2c/rm_comms_i2c.o
-                0x00096954                g_comms_on_comms_i2c
+                0x00096944       0x14 ./ra/fsp/src/rm_comms_i2c/rm_comms_i2c.o
+                0x00096944                g_comms_on_comms_i2c
  .rodata.S_FLASH2
-                0x00096968     0x1610 ./ra/fsp/src/r_sce/crypto_procedures/src/sce9/plainkey/primitive/s_flash2.o
-                0x00096968                S_FLASH2
+                0x00096958     0x1610 ./ra/fsp/src/r_sce/crypto_procedures/src/sce9/plainkey/primitive/s_flash2.o
+                0x00096958                S_FLASH2
  .rodata.sce_oem_key_size
-                0x00097f78       0x90 ./ra/fsp/src/r_sce/crypto_procedures/src/sce9/plainkey/adaptors/r_sce_adapt.o
-                0x00097f78                sce_oem_key_size
+                0x00097f68       0x90 ./ra/fsp/src/r_sce/crypto_procedures/src/sce9/plainkey/adaptors/r_sce_adapt.o
+                0x00097f68                sce_oem_key_size
  .rodata.g_ioport_on_ioport
-                0x00098008       0x34 ./ra/fsp/src/r_ioport/r_ioport.o
-                0x00098008                g_ioport_on_ioport
+                0x00097ff8       0x34 ./ra/fsp/src/r_ioport/r_ioport.o
+                0x00097ff8                g_ioport_on_ioport
  .rodata.g_vbatt_pins_input
-                0x0009803c        0x6 ./ra/fsp/src/r_ioport/r_ioport.o
- *fill*         0x00098042        0x2 ff
+                0x0009802c        0x6 ./ra/fsp/src/r_ioport/r_ioport.o
+ *fill*         0x00098032        0x2 ff
  .rodata.g_i2c_master_on_iic
-                0x00098044       0x20 ./ra/fsp/src/r_iic_master/r_iic_master.o
-                0x00098044                g_i2c_master_on_iic
+                0x00098034       0x20 ./ra/fsp/src/r_iic_master/r_iic_master.o
+                0x00098034                g_i2c_master_on_iic
  .rodata.g_external_irq_on_icu
-                0x00098064       0x14 ./ra/fsp/src/r_icu/r_icu.o
-                0x00098064                g_external_irq_on_icu
+                0x00098054       0x14 ./ra/fsp/src/r_icu/r_icu.o
+                0x00098054                g_external_irq_on_icu
  .rodata.g_timer_on_gpt
-                0x00098078       0x30 ./ra/fsp/src/r_gpt/r_gpt.o
-                0x00098078                g_timer_on_gpt
+                0x00098068       0x30 ./ra/fsp/src/r_gpt/r_gpt.o
+                0x00098068                g_timer_on_gpt
  .rodata.g_ether_phy_on_ether_phy
-                0x000980a8       0x14 ./ra/fsp/src/r_ether_phy/r_ether_phy.o
-                0x000980a8                g_ether_phy_on_ether_phy
+                0x00098098       0x14 ./ra/fsp/src/r_ether_phy/r_ether_phy.o
+                0x00098098                g_ether_phy_on_ether_phy
  .rodata.g_ether_on_ether
-                0x000980bc       0x28 ./ra/fsp/src/r_ether/r_ether.o
-                0x000980bc                g_ether_on_ether
+                0x000980ac       0x28 ./ra/fsp/src/r_ether/r_ether.o
+                0x000980ac                g_ether_on_ether
  .rodata.pause_resolution
-                0x000980e4       0x20 ./ra/fsp/src/r_ether/r_ether.o
+                0x000980d4       0x20 ./ra/fsp/src/r_ether/r_ether.o
  .rodata.g_prcr_masks
-                0x00098104        0x8 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+                0x000980f4        0x8 ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
  .rodata.g_bsp_prv_leds
-                0x0009810c        0xc ./ra/board/ra6m5_ck/board_leds.o
+                0x000980fc        0xc ./ra/board/ra6m5_ck/board_leds.o
  .rodata.g_bsp_leds
-                0x00098118        0x8 ./ra/board/ra6m5_ck/board_leds.o
-                0x00098118                g_bsp_leds
+                0x00098108        0x8 ./ra/board/ra6m5_ck/board_leds.o
+                0x00098108                g_bsp_leds
  .rodata.epa_no2_aqi
-                0x00098120       0x1c D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
-                0x00098120                epa_no2_aqi
+                0x00098110       0x1c D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
+                0x00098110                epa_no2_aqi
  .rodata.epa_no2_conc
-                0x0009813c       0x1c D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
-                0x0009813c                epa_no2_conc
+                0x0009812c       0x1c D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
+                0x0009812c                epa_no2_conc
  .rodata.epa_o3_aqi
-                0x00098158       0x18 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
-                0x00098158                epa_o3_aqi
+                0x00098148       0x18 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
+                0x00098148                epa_o3_aqi
  .rodata.epa_o3_conc
-                0x00098170       0x18 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
-                0x00098170                epa_o3_conc
+                0x00098160       0x18 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
+                0x00098160                epa_o3_conc
  .rodata.scaler_and_pca_g
-                0x00098188      0x160 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
+                0x00098178      0x160 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
  .rodata.scaler_and_pca_o
-                0x000982e8       0x20 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
+                0x000982d8       0x20 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
  .rodata.svc_poly_coeffs
-                0x00098308      0x294 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
+                0x000982f8      0x294 D:\GIT_VIVEK_Branch\cloud-connectivity\ra\ra6m5\azure\Azure_CK_RA6M5_Ethernet_App\ra\fsp\lib\rm_zmod4xxx\cm33_gcc\lib_oaq_1st_gen.a(oaq_1st_gen.o)
  .rodata._ctype_
-                0x0009859c      0x101 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-ctype_.o)
-                0x0009859c                _ctype_
- *fill*         0x0009869d        0x3 ff
+                0x0009858c      0x101 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-ctype_.o)
+                0x0009858c                _ctype_
+ *fill*         0x0009868d        0x3 ff
  .rodata._global_impure_ptr
-                0x000986a0        0x4 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-impure.o)
-                0x000986a0                _global_impure_ptr
+                0x00098690        0x4 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-impure.o)
+                0x00098690                _global_impure_ptr
  .rodata.__sf_fake_stderr
-                0x000986a4       0x20 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-findfp.o)
-                0x000986a4                __sf_fake_stderr
+                0x00098694       0x20 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-findfp.o)
+                0x00098694                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x000986c4       0x20 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-findfp.o)
-                0x000986c4                __sf_fake_stdin
+                0x000986b4       0x20 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-findfp.o)
+                0x000986b4                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x000986e4       0x20 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-findfp.o)
-                0x000986e4                __sf_fake_stdout
+                0x000986d4       0x20 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-findfp.o)
+                0x000986d4                __sf_fake_stdout
  .rodata._svfprintf_r.str1.1
-                0x00098704       0x11 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x000986f4       0x11 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
  .rodata._vfprintf_r.str1.1
-                0x00098715       0x11 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00098705       0x11 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x00098715       0x22 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
- *fill*         0x00098737        0x1 ff
- .rodata.halF   0x00098738       0x10 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libm.a(lib_a-e_exp.o)
- .rodata.ln2HI  0x00098748       0x10 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libm.a(lib_a-e_exp.o)
- .rodata.ln2LO  0x00098758       0x10 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libm.a(lib_a-e_exp.o)
-                0x00098768                __usb_dev_descriptor_start_fs = .
+                0x00098705       0x22 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ *fill*         0x00098727        0x1 ff
+ .rodata.halF   0x00098728       0x10 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libm.a(lib_a-e_exp.o)
+ .rodata.ln2HI  0x00098738       0x10 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libm.a(lib_a-e_exp.o)
+ .rodata.ln2LO  0x00098748       0x10 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libm.a(lib_a-e_exp.o)
+                0x00098758                __usb_dev_descriptor_start_fs = .
  *(.usb_device_desc_fs*)
-                0x00098768                __usb_cfg_descriptor_start_fs = .
+                0x00098758                __usb_cfg_descriptor_start_fs = .
  *(.usb_config_desc_fs*)
-                0x00098768                __usb_interface_descriptor_start_fs = .
+                0x00098758                __usb_interface_descriptor_start_fs = .
  *(.usb_interface_desc_fs*)
-                0x00098768                __usb_descriptor_end_fs = .
-                0x00098768                __usb_dev_descriptor_start_hs = .
+                0x00098758                __usb_descriptor_end_fs = .
+                0x00098758                __usb_dev_descriptor_start_hs = .
  *(.usb_device_desc_hs*)
-                0x00098768                __usb_cfg_descriptor_start_hs = .
+                0x00098758                __usb_cfg_descriptor_start_hs = .
  *(.usb_config_desc_hs*)
-                0x00098768                __usb_interface_descriptor_start_hs = .
+                0x00098758                __usb_interface_descriptor_start_hs = .
  *(.usb_interface_desc_hs*)
-                0x00098768                __usb_descriptor_end_hs = .
+                0x00098758                __usb_descriptor_end_hs = .
  *(.eh_frame*)
- .eh_frame      0x00098768        0x0 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
- .eh_frame      0x00098768        0x4 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard/crtend.o
-                0x0009876c                __ROM_End = .
+ .eh_frame      0x00098758        0x0 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
+ .eh_frame      0x00098758        0x4 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard/crtend.o
+                0x0009875c                __ROM_End = .
                 0x000001c0                __Vectors_Size = (__Vectors_End - __Vectors)
 
-.glue_7         0x0009876c        0x0
- .glue_7        0x0009876c        0x0 linker stubs
+.glue_7         0x0009875c        0x0
+ .glue_7        0x0009875c        0x0 linker stubs
 
-.glue_7t        0x0009876c        0x0
- .glue_7t       0x0009876c        0x0 linker stubs
+.glue_7t        0x0009875c        0x0
+ .glue_7t       0x0009875c        0x0 linker stubs
 
-.vfp11_veneer   0x0009876c        0x0
- .vfp11_veneer  0x0009876c        0x0 linker stubs
+.vfp11_veneer   0x0009875c        0x0
+ .vfp11_veneer  0x0009875c        0x0 linker stubs
 
-.v4_bx          0x0009876c        0x0
- .v4_bx         0x0009876c        0x0 linker stubs
+.v4_bx          0x0009875c        0x0
+ .v4_bx         0x0009875c        0x0 linker stubs
 
-.iplt           0x0009876c        0x0
- .iplt          0x0009876c        0x0 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
+.iplt           0x0009875c        0x0
+ .iplt          0x0009875c        0x0 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0009876c                __exidx_start = .
+                0x0009875c                __exidx_start = .
 
-.ARM.exidx      0x0009876c        0x8
+.ARM.exidx      0x0009875c        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0009876c        0x8 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x00098774                __exidx_end = .
-                0x00098774                __etext = .
+ .ARM.exidx     0x0009875c        0x8 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x00098764                __exidx_end = .
+                0x00098764                __etext = .
                 0x20000000                __tz_RAM_S = ORIGIN (RAM)
 
 .fsp_dtc_vector_table
@@ -24614,7 +24614,7 @@ END GROUP
                 0x20000000                . = ORIGIN (RAM)
  *(.fsp_dtc_vector_table)
 
-.data           0x20000000      0x868 load address 0x00098774
+.data           0x20000000      0x868 load address 0x00098764
                 0x20000000                __data_start__ = .
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                __Code_In_RAM_Start = .
@@ -24781,23 +24781,23 @@ END GROUP
  *(.jcr*)
                 0x20000868                . = ALIGN (0x4)
                 0x20000868                __data_end__ = .
-                0x00098fdc                __dtcm_data_init_start = ((__etext + __data_end__) - __data_start__)
+                0x00098fcc                __dtcm_data_init_start = ((__etext + __data_end__) - __data_start__)
 
-.igot.plt       0x20000868        0x0 load address 0x00098fdc
+.igot.plt       0x20000868        0x0 load address 0x00098fcc
  .igot.plt      0x20000868        0x0 c:/renesas/ra/e2studio_v2022-10_fsp_v4.2.0/toolchains/gcc_arm/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
 
-.dtcm_data      0x00000000        0x0 load address 0x00098fdc
+.dtcm_data      0x00000000        0x0 load address 0x00098fcc
                 0x00000000                __tz_DTCM_S = ABSOLUTE (DTCM_START)
                 0x00000000                __dtcm_data_start__ = .
  *(.dtcm_data*)
                 0x00000000                __dtcm_data_end__ = .
 
-.dtcm_noinit    0x00000000        0x0 load address 0x00098fdc
+.dtcm_noinit    0x00000000        0x0 load address 0x00098fcc
                 0x00000000                __dtcm_noinit_start = .
  *(.dtcm_noinit*)
                 0x00000000                __dtcm_noinit_end = .
                 0x00000000                __tz_DTCM_N = DEFINED (DTCM_NS_START)?ABSOLUTE (DTCM_NS_START):ALIGN (__dtcm_noinit_end, 0x2000)
-                0x00098fdc                DATA_END = (LOADADDR (.data) + SIZEOF (.data))
+                0x00098fcc                DATA_END = (LOADADDR (.data) + SIZEOF (.data))
                 0x00099000                SGSTUBS_LOC = (DEFINED (PROJECT_SECURE) && DEFINED (FLASH_NSC_START))?ABSOLUTE (FLASH_NSC_START):ALIGN (DATA_END, 0x400)
 
 .gnu.sgstubs    0x00099000        0x0
@@ -24816,10 +24816,10 @@ END GROUP
  *(.code_in_qspi*)
                 0x60000000                __qspi_flash_end__ = .
                 0x00000000                __qspi_flash_code_size__ = (__qspi_flash_end__ - __qspi_flash_start__)
-                0x00098fdc                __qspi_flash_code_addr__ = (__etext + (__data_end__ - __data_start__))
+                0x00098fcc                __qspi_flash_code_addr__ = (__etext + (__data_end__ - __data_start__))
 
 .qspi_non_retentive
-                0x60000000        0x0 load address 0x00098fdc
+                0x60000000        0x0 load address 0x00098fcc
                 0x60000000                __qspi_non_retentive_start__ = .
  *(.qspi_non_retentive*)
                 0x60000000                __qspi_non_retentive_end__ = .
@@ -24852,10 +24852,10 @@ END GROUP
  *(.code_in_ospi_device_0*)
                 0x68000000                __ospi_device_0_end__ = .
                 0x00000000                __ospi_device_0_code_size__ = (__ospi_device_0_end__ - __ospi_device_0_start__)
-                0x00098fdc                __ospi_device_0_code_addr__ = (__etext + (__data_end__ - __data_start__))
+                0x00098fcc                __ospi_device_0_code_addr__ = (__etext + (__data_end__ - __data_start__))
 
 .ospi_device_0_non_retentive
-                0x68000000        0x0 load address 0x00098fdc
+                0x68000000        0x0 load address 0x00098fcc
                 0x68000000                __ospi_device_0_non_retentive_start__ = .
  *(.ospi_device_0_non_retentive*)
                 0x68000000                __ospi_device_0_non_retentive_end__ = .
@@ -24872,10 +24872,10 @@ END GROUP
  *(.code_in_ospi_device_1*)
                 0x70000000                __ospi_device_1_end__ = .
                 0x00000000                __ospi_device_1_code_size__ = (__ospi_device_1_end__ - __ospi_device_1_start__)
-                0x00098fdc                __ospi_device_1_code_addr__ = (__etext + (__data_end__ - __data_start__))
+                0x00098fcc                __ospi_device_1_code_addr__ = (__etext + (__data_end__ - __data_start__))
 
 .ospi_device_1_non_retentive
-                0x70000000        0x0 load address 0x00098fdc
+                0x70000000        0x0 load address 0x00098fcc
                 0x70000000                __ospi_device_1_non_retentive_start__ = .
  *(.ospi_device_1_non_retentive*)
                 0x70000000                __ospi_device_1_non_retentive_end__ = .
@@ -25719,51 +25719,51 @@ END GROUP
                 0x2001a264                . = ALIGN (0x4)
                 0x2001a264                __bss_end__ = .
 
-.heap           0x2001a268     0x2000
+.heap           0x2001a268     0x1000
                 0x2001a268                . = ALIGN (0x8)
                 0x2001a268                __HeapBase = .
  *(.heap)
- .heap          0x2001a268     0x2000 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
-                0x2001c268                __HeapLimit = .
+ .heap          0x2001a268     0x1000 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+                0x2001b268                __HeapLimit = .
 
-.stack_dummy    0x2001c268     0xa000
-                0x2001c268                . = ALIGN (0x8)
-                0x2001c268                __StackLimit = .
+.stack_dummy    0x2001b268     0x9000
+                0x2001b268                . = ALIGN (0x8)
+                0x2001b268                __StackLimit = .
  *(.stack)
- .stack         0x2001c268     0x2000 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
-                0x2001e268                __StackTop = .
+ .stack         0x2001b268     0x1000 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+                0x2001c268                __StackTop = .
  *(.stack*)
- .stack.g_ip0   0x2001e268      0x800 ./src/usr_network.o
-                0x2001e268                g_ip0_stack_memory
+ .stack.g_ip0   0x2001c268      0x800 ./src/usr_network.o
+                0x2001c268                g_ip0_stack_memory
  .stack.CommandRX_Thread
-                0x2001ea68      0x800 ./ra_gen/CommandRX_Thread.o
+                0x2001ca68      0x800 ./ra_gen/CommandRX_Thread.o
  .stack.Console_Thread
-                0x2001f268     0x1000 ./ra_gen/Console_Thread.o
+                0x2001d268     0x1000 ./ra_gen/Console_Thread.o
  .stack.HS3001_Thread
-                0x20020268      0xc00 ./ra_gen/HS3001_Thread.o
+                0x2001e268      0xc00 ./ra_gen/HS3001_Thread.o
  .stack.ICM_Thread
-                0x20020e68      0x800 ./ra_gen/ICM_Thread.o
+                0x2001ee68      0x800 ./ra_gen/ICM_Thread.o
  .stack.ICP_Thread
-                0x20021668      0x800 ./ra_gen/ICP_Thread.o
+                0x2001f668      0x800 ./ra_gen/ICP_Thread.o
  .stack.OB_1203_Thread
-                0x20021e68      0x800 ./ra_gen/OB_1203_Thread.o
+                0x2001fe68      0x800 ./ra_gen/OB_1203_Thread.o
  .stack.ZMOD4410_Thread
-                0x20022668      0x800 ./ra_gen/ZMOD4410_Thread.o
+                0x20020668      0x800 ./ra_gen/ZMOD4410_Thread.o
  .stack.ZMOD4510_Thread
-                0x20022e68      0x800 ./ra_gen/ZMOD4510_Thread.o
+                0x20020e68      0x800 ./ra_gen/ZMOD4510_Thread.o
  .stack.application_thread
-                0x20023668     0x2400 ./ra_gen/application_thread.o
+                0x20021668     0x2400 ./ra_gen/application_thread.o
  .stack.c2d_thread
-                0x20025a68      0x800 ./ra_gen/c2d_thread.o
-                0x20026268                __StackTopAll = .
-                0x20026268                PROVIDE (__stack = __StackTopAll)
-                0x20026268                __RAM_segment_used_end__ = ALIGN (__StackTopAll, 0x4)
+                0x20023a68      0x800 ./ra_gen/c2d_thread.o
+                0x20024268                __StackTopAll = .
+                0x20024268                PROVIDE (__stack = __StackTopAll)
+                0x20024268                __RAM_segment_used_end__ = ALIGN (__StackTopAll, 0x4)
                 0x2006a000                __tz_RAM_C = DEFINED (RAM_NSC_START)?ABSOLUTE ((RAM_NSC_START - RAM_NS_BUFFER_BLOCK_LENGTH)):__RESERVE_NS_RAM?ABSOLUTE (RAM_NS_BUFFER_BLOCK_START):ALIGN (__RAM_segment_used_end__, 0x400)
                 0x2006a000                __tz_RAM_N = DEFINED (RAM_NS_START)?ABSOLUTE ((RAM_NS_START - RAM_NS_BUFFER_BLOCK_LENGTH)):__RESERVE_NS_RAM?ABSOLUTE (RAM_NS_BUFFER_BLOCK_START):ALIGN (__tz_RAM_C, 0x2000)
 
-.ns_buffer      0x20026270    0x59810
+.ns_buffer      0x20024270    0x5b810
                 0x2006bc00                . = __RESERVE_NS_RAM?ABSOLUTE ((RAM_NS_BUFFER_START & 0xffffffe0)):.
- *fill*         0x20026270    0x45990 
+ *fill*         0x20024270    0x47990 
  *(.ns_buffer*)
  .ns_buffer.eth
                 0x2006bc00    0x13df8 ./src/usr_network.o

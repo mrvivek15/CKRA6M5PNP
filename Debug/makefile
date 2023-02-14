@@ -133,7 +133,7 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_FLASH += \
-AzureCloudRA6M5X509_FSP420.srec \
+AzureCloudRA6M5X509_FSP420.hex \
 
 SECONDARY_SIZE += \
 AzureCloudRA6M5X509_FSP420.siz \
@@ -147,8 +147,8 @@ AzureCloudRA6M5X509_FSP420.elf: $(OBJS) $(USER_OBJS) $(LINKER_SCRIPT)
 	$(file > AzureCloudRA6M5X509_FSP420.elf.in,-mcpu=cortex-m33 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g -gdwarf-4 -T "fsp.ld" -Xlinker --gc-sections -L "D:\\GIT_VIVEK_Branch\\cloud-connectivity\\ra\\ra6m5\\azure\\Azure_CK_RA6M5_Ethernet_App/script" -L "D:\\GIT_VIVEK_Branch\\cloud-connectivity\\ra\\ra6m5\\azure\\Azure_CK_RA6M5_Ethernet_App\\ra\\fsp\\lib\\rm_zmod4xxx\\cm33_gcc" -Wl,-Map,"AzureCloudRA6M5X509_FSP420.map" --specs=nano.specs --specs=rdimon.specs -o "AzureCloudRA6M5X509_FSP420.elf" -Wl,--start-group $(OBJS) $(USER_OBJS) $(LIBS) -Wl,--end-group)
 	@echo Building target: $@ && arm-none-eabi-gcc @"AzureCloudRA6M5X509_FSP420.elf.in"
 
-AzureCloudRA6M5X509_FSP420.srec: AzureCloudRA6M5X509_FSP420.elf
-	arm-none-eabi-objcopy -O srec "AzureCloudRA6M5X509_FSP420.elf"  "AzureCloudRA6M5X509_FSP420.srec"
+AzureCloudRA6M5X509_FSP420.hex: AzureCloudRA6M5X509_FSP420.elf
+	arm-none-eabi-objcopy -O ihex "AzureCloudRA6M5X509_FSP420.elf"  "AzureCloudRA6M5X509_FSP420.hex"
 
 AzureCloudRA6M5X509_FSP420.siz: AzureCloudRA6M5X509_FSP420.elf
 	arm-none-eabi-size --format=berkeley "AzureCloudRA6M5X509_FSP420.elf"
